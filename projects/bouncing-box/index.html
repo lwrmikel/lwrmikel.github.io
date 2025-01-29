@@ -66,6 +66,13 @@
 			//////////////////////////////////////////////////////////////////
 
 			// TODO 2 - Variable declarations 
+			var postionsX = 0;
+			var points = 0;
+			var speed = 10;
+
+
+
+
 
 
 
@@ -75,7 +82,13 @@
 			turn it around! 
 			*/
 			function update() {
+               positionX = positionX + speed;
+			   moveBoxTo(positionX);
 
+			   if (positionX > boardWidth);
+			   {speed = -speed;}
+			   if (positionX < 0)
+			      {speed = -speed;}
 
 			};
 
@@ -85,9 +98,21 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
-
+				positionX = 0;
+				points = points + 1;
+				changeBoxText(points);
+				if ((speed) =>) 0 {
+					speed = speed +3;
+				}
+                if (speed <= 0) {
+					speed = speed -3;
+				}
+				var colorStr = "rgb(120, 25, 50)";
+				box.css("background-color", colorStr)
 
 			};
+		})();
+		<v/script> 
 
 
 
